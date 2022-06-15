@@ -51,7 +51,7 @@ port: 4358 (si necesitas otro puerto, puedes cambiarlo en el compose)
 
 Con la base de datos cargada, se puede utilizar la base y su estructura haciendo uso del archivo schema.sql que se encuentra en la carpeta `docker` , con ello se cargara la siguiente estructura de base de datos.
 
-![asd](/Users/bvegam/Documents/cursos/kruger_challenge/img/database_model.png)
+![asd](./img/database_model.png)
 
 Ademas de ello se crearan dos registros de roles los cuales serviran para el reto, es **muy importante** que esos dos registros esten creados.
 
@@ -69,7 +69,7 @@ Una vez levantado el proyecto se creara un usuario por defecto para que pueda cr
 
 Una vez levantado el proyecto, para consumir los servicios se lo realiza a traves del context-path `api/v1` y después el endpoint a consumir. Para hacerlo más sencillo esta la documentación con swagger, la cual se puede acceder utilizando el siguiente link:[Swagger UI](http://localhost:8080/api/v1/swagger-ui/index.html#/) . Con ello aparecera un sitio como el siguiente:
 
-![aas](/Users/bvegam/Documents/cursos/kruger_challenge/img/swagger.png)
+![aas](./img/swagger.png)
 
 El admin puede consumir y acceder a todos los endpoint. Por otro lado un rol user solamente puede acceder al `/employee/update/`,`/dose/**`,  que son endpoints donde el usuario puede realizar consultas y creaciones. Esto lo pueden verificar en el archivo de configuración de seguridad del proyecto.
 
