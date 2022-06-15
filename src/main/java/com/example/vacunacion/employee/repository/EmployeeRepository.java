@@ -38,7 +38,7 @@ public class EmployeeRepository {
         List<Employee> employees = employeeCrudRepository.findAll();
         // filter employees wby status
         if (criteria.getVaccineStatus()!= null) {
-            employees = employees.stream().filter(Employee::getVaccineStatus).collect(Collectors.toList());
+            employees = employees.stream().filter(employee -> employee.getVaccineStatus() == criteria.getVaccineStatus()).collect(Collectors.toList());
         }
         if(criteria.getVaccine()!= null){
             employees = employees.stream().filter(employee -> employee.getDoses().stream().anyMatch(dose -> dose.getVaccine().getName().equals(criteria.getVaccine()))).collect(Collectors.toList());
