@@ -1,0 +1,14 @@
+version: '3.6'
+
+services:
+
+  srvdb:
+    image: postgres
+    container_name: srvdb
+    hostname: srvdb
+    environment:
+      POSTGRES_USER: kruger
+      POSTGRES_DB: vaccines
+      POSTGRES_PASSWORD: kruger.123
+    ports:
+      - 4358:5432
