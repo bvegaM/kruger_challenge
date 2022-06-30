@@ -75,8 +75,8 @@ create table T_DOSES(
 		on update no action
 );
 
-INSERT INTO public.t_roles (role_name, role_description) VALUES('admin', 'admin role');
-INSERT INTO public.t_roles (role_name, role_description) VALUES('user', 'user role');
+INSERT INTO t_roles (role_name, role_description) VALUES('admin', 'admin role');
+INSERT INTO t_roles (role_name, role_description) VALUES('user', 'user role');
 
 
 
